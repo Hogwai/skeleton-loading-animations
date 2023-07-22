@@ -1,0 +1,122 @@
+body {
+  background-color: #dedede;
+  height: 100vh;
+}
+
+.newsCards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.card {
+  max-width: 450px;
+  max-height: 400px;
+
+  min-width: 400px;
+  min-height: 400px;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 20px;
+  margin-bottom: 20px;
+
+  background-color: #fff;
+  border: 1px solid #bebebe;
+  border-radius: 10px;
+  box-shadow: 3px 5px #bebebe;
+
+}
+
+.card .img-load {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-load img {
+  max-height: 200px;
+}
+
+@keyframes loader-bg {
+  from {
+    background-color: #cecece;
+  }
+
+  to {
+    background-color: #e9e6e6;
+  }
+}
+
+.load {
+  background-color: #cecece;
+  width: 100%;
+  border-radius: 3px;
+  animation: loader-bg 1s linear infinite alternate;
+}
+
+.title-load {
+  height: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.desc {
+  line-height: 1.5;
+}
+
+.desc-load {
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.card .desc-load:first-child {
+  width: calc(100% - 5%);
+}
+
+.card .desc-load:nth-child(even) {
+  width: calc(100% - 20%);
+}
+
+.card .desc-load:last-child {
+  width: calc(100% - 15%);
+}
+
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.btnBackToHome {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnBackToHome:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+}
+
